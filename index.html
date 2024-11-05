@@ -21,11 +21,11 @@ function redirectAuth() {
 
 function exchangeCode(acode) {
             if (accesstoken == '') {
-			var postdata = 'grant_type=authorization_code&redirect_uri=https://svinq.github.io/&code=' + acode +;
+			var postdata = 'grant_type=authorization_code&redirect_uri=https://svinq.github.io/&code=' + acode;
 			postData(tokenurl, postdata, credentials)
 				.then(data => {
 					console.log(JSON.stringify(data, null, 2));
-					document.getElementById("result").innerHTML += JSON.stringify(data, null, 2);
+					document.getElementById("result").innerHTML += '<pre>' + JSON.stringify(data, null, 2) + '</pre>';
 				});
 			}
         }
