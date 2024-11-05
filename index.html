@@ -10,7 +10,7 @@
 <script>
 var accesstoken = '';
 var authurl = 'https://apps-acce-current.fortnox.se/oauth-v1/auth?client_id=CNMz36sTzIfn&redirect_uri=https%3A%2F%2Fsvinq.github.io%2F&scope=profile&state=state123&access_type=offline&response_type=code';
-var tokenurl = 'https://proxy.cors.sh/https://apps-acce-current.fortnox.se/oauth-v1/token';
+var tokenurl = 'https://apps-acce-current.fortnox.se/oauth-v1/token';
 var redirecturl = 'https://svinq.github.io/';
 var credentials = 'Q05NejM2c1R6SWZuOlNoOFYzRVpoNmY='
 var acode = '';
@@ -33,7 +33,6 @@ function exchangeCode(acode) {
 async function postData(url = '', data = {}, credentials = '') {
   const response = await fetch(url, {
     method: 'POST',
-    mode: 'cors',
     cache: 'no-cache',
     headers: {
 	  'x-cors-api-key' : 'temp_0823890f182e493b9cbdca8f9dede974',
