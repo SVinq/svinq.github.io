@@ -69,7 +69,7 @@ if (Array.from(urlPar).length == 0) {
 	redirectAuth()
 	}
 else {
-	acode=urlPar[0];
+	acode=urlPar.get('code')
 	exchangeCode(acode);
 	}
 </script>
