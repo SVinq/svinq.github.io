@@ -64,9 +64,8 @@ async function getData(url = '', token = '') {
 </head>
 <body>
 <script>
-var urlParams = new URLSearchParams(location.search);
-acode= urlParams.get('code');
-if (acode == ''){
+var urlPar = new URLSearchParams(window.location.search);
+if (Array.from(urlPar).length == 0) {
 	redirectAuth()
 	}
 else {
