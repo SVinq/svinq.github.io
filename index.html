@@ -20,10 +20,8 @@ function redirectAuth() {
 		}
 
 function exchangeCode(acode) {
-			accesstoken=Cookies.get('accesscode');
-			console.log(accesstoken);
             if (accesstoken == '') {
-			var postdata = 'grant_type=authorization_code&code=' + acode;// + '&redirect_uri=' + redirecturl;
+			var postdata = 'grant_type=authorization_code&code=' + acode;
 			postData(tokenurl, postdata, credentials)
 				.then(data => {
 					console.log(JSON.stringify(data, null, 2));
