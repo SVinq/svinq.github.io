@@ -21,7 +21,7 @@ function redirectAuth() {
 
 function exchangeCode(acode) {
             if (accesstoken == '') {
-			var postdata = 'grant_type=authorization_code&code=' + acode;
+			var postdata = 'grant_type=authorization_code&redirect_uri=https://svinq.github.io/&code=' + acode +;
 			postData(tokenurl, postdata, credentials)
 				.then(data => {
 					console.log(JSON.stringify(data, null, 2));
